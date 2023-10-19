@@ -1,0 +1,419 @@
+body{
+  margin: 0;
+}
+.hd h1{
+  color: white;
+  text-align: center;
+  font-family: "Pixelify Sans";
+  font-size: 1.8rem;
+  line-height: 0.5;
+}
+h2{
+  text-align: center;
+  background: #121FCF;
+  background: linear-gradient(to right, #121FCF 0%, #CF1512 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+font-weight: 900;
+font-size: 1.5rem;
+}
+#myVideo {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  min-width: 100%;
+  min-height: 100%;
+  z-index: -1;
+}
+
+
+ 
+ .fire {
+  margin: 50px 0;
+  color: #f5f5f5; /* Light text color */
+  text-align:center; /* Center alignment of text */
+  font-family: 'Courier New', Courier, monospace; /* Monospace font for sharp edges */
+  font-size: 4rem; /* Text size */
+  /* Multi-layered text-shadow for fire effect */
+  text-shadow:
+  0px -1px 3px #fff, /* Innermost layer - intense heat (white) */
+  0px -2px 6px #FF3, /* Second layer - core of flame (yellow) */
+  0px -6px 12px #F90, /* Middle layer - body of flame (orange) */
+  0px -10px 20px #C33; /* Outermost layer - edges of flame (red) */
+ }
+ 
+ /* Define the animation named "flicker" */
+ @keyframes flicker {
+     /* Initial state of animation */
+     0%, 
+     /* Final state of animation */
+     100% { 
+         text-shadow: 
+             0 -1px 3px #fff, /* Innermost layer - intense heat (white) */
+             0 -2px 6px #FF3, /* Second layer - core of flame (yellow) */
+             0 -6px 12px #F90, /* Middle layer - body of flame (orange) */
+             0 -10px 20px #C33; /* Outermost layer - edges of flame (red) */
+     }
+     /* Middle state of animation */
+     50% { 
+         text-shadow: 
+             0 -2px 6px #fff, /* Innermost layer - intense heat (white) */
+             0 -4px 12px #FF3, /* Second layer - core of flame (yellow) */
+             0 -8px 16px #F90, /* Middle layer - body of flame (orange) */
+             0 -12px 24px #C33; /* Outermost layer - edges of flame (red) */
+     }
+ }
+ 
+ .fire {
+     /* Apply the "flicker" animation to the .fire class */
+     animation: flicker 2s infinite;
+ }
+ 
+
+@media (max-width:1024px) {
+  #myVideo{
+    width: auto;
+    height: auto;
+  }
+  body{
+    width: 100%;
+  }
+}
+.hd{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 130px;
+}
+
+.glitch{
+  font-size: 2.2rem;
+  color: white;
+  margin: 40px 0;
+  animation: glitch 750ms infinite;
+  font-weight: 700;
+  text-transform: uppercase;
+  font-family: 'Open Sans', sans-serif;
+  font-family: 'Roboto', sans-serif;
+  letter-spacing: 0.5rem;
+  text-shadow: 0.05em 0 0 rgba(255, 0, 0, .75), -0.025em -.05em 0 rgba(0, 255, 0, .75), 0.025em .05em 0 rgba(0, 0, 255, .75);
+  }
+  .glitch2Bedore{
+  font-size: 6rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  font-family: 'Open Sans', sans-serif;
+  font-family: 'Roboto', sans-serif;
+  letter-spacing: 0.5rem;
+  color: white;
+  } @keyframes glitch{
+  0%{
+  text-shadow:
+  0.05em 0 0 rgba(255, 0, 0, .75),
+  -0.025em -.05em 0 rgba(0, 255, 0, .75),
+  0.025em .05em 0 rgba(0, 0, 255, .75);
+  }
+  14%{
+  text-shadow:
+  0.05em 0 0 rgba(255, 0, 0, .75),
+  -0.025em -.05em 0 rgba(0, 255, 0, .75),
+  0.025em .05em 0 rgba(0, 0, 255, .75);
+  }
+  15%{
+  text-shadow:
+  -0.05em -.025em 0 rgba(255, 0, 0, .75),
+  0.025em 0.025em 0 rgba(0, 255, 0, .75),
+  -0.05em -.05em 0 rgba(0, 0, 255, .75);
+  }
+  49%{
+  text-shadow:
+  -0.05em -.025em 0 rgba(255, 0, 0, .75),
+  0.025em 0.025em 0 rgba(0, 255, 0, .75),
+  -0.05em -.05em 0 rgba(0, 0, 255, .75);
+  }
+  50%{
+  text-shadow:
+  0.025em 0.05em 0 rgba(255, 0, 0, .75),
+  0.05em 0 0 rgba(0, 255, 0, .75),
+  0 -0.05em 0 rgba(0, 0, 255, .75);
+  }
+  99%{
+  text-shadow:
+  0.025em 0.05em 0 rgba(255, 0, 0, .75),
+  0.05em 0 0 rgba(0, 255, 0, .75),
+  0 -0.05em 0 rgba(0, 0, 255, .75);
+  }
+  100%{
+  text-shadow:
+  -0.025em 0 0 rgba(255, 0, 0, .75),
+  -0.025em -0.025em 0 rgba(0, 255, 0, .75),
+  -0.025em -0.05em 0 rgba(0, 0, 255, .75);
+  }
+  }
+  .containerGlitch{
+  width: 100%;
+  }
+  @font-face {
+    font-family: Clip;
+    src: url("https://acupoftee.github.io/fonts/Clip.ttf");
+  }
+  
+
+  
+  .sign {
+    background-image: radial-gradient(
+      ellipse 50% 35% at 50% 50%,
+      #6b1839,
+      transparent
+    );
+    letter-spacing: 2;
+    margin: 40px 0;
+    font-family: "Clip";
+    text-transform: uppercase;
+    font-size: 2rem;
+    color: #ffe6ff;
+    text-shadow: 0 0 0.6rem #ffe6ff, 0 0 1.5rem #ff65bd,
+      -0.2rem 0.1rem 1rem #ff65bd, 0.2rem 0.1rem 1rem #ff65bd,
+      0 -0.5rem 2rem #ff2483, 0 0.5rem 3rem #ff2483;
+    animation: shine 2s forwards, flicker 3s infinite;
+  }
+  
+  @keyframes blink {
+    0%,
+    22%,
+    36%,
+    75% {
+      color: #ffe6ff;
+      text-shadow: 0 0 0.6rem #ffe6ff, 0 0 1.5rem #ff65bd,
+        -0.2rem 0.1rem 1rem #ff65bd, 0.2rem 0.1rem 1rem #ff65bd,
+        0 -0.5rem 2rem #ff2483, 0 0.5rem 3rem #ff2483;
+    }
+    28%,
+    33% {
+      color: #ff65bd;
+      text-shadow: none;
+    }
+    82%,
+    97% {
+      color: #ff2483;
+      text-shadow: none;
+    }
+  }
+  
+  .flicker {
+    animation: shine 2s forwards, blink 3s 2s infinite;
+  }
+  
+  .fast-flicker {
+    animation: shine 2s forwards, blink 10s 1s infinite;
+  }
+  
+  @keyframes shine {
+    0% {
+      color: #6b1839;
+      text-shadow: none;
+    }
+    100% {
+      color: #ffe6ff;
+      text-shadow: 0 0 0.6rem #ffe6ff, 0 0 1.5rem #ff65bd,
+        -0.2rem 0.1rem 1rem #ff65bd, 0.2rem 0.1rem 1rem #ff65bd,
+        0 -0.5rem 2rem #ff2483, 0 0.5rem 3rem #ff2483;
+    }
+  }
+  
+  @keyframes flicker {
+    from {
+      opacity: 1;
+    }
+  
+    4% {
+      opacity: 0.9;
+    }
+  
+    6% {
+      opacity: 0.85;
+    }
+  
+    8% {
+      opacity: 0.95;
+    }
+  
+    10% {
+      opacity: 0.9;
+    }
+  
+    11% {
+      opacity: 0.922;
+    }
+  
+    12% {
+      opacity: 0.9;
+    }
+  
+    14% {
+      opacity: 0.95;
+    }
+  
+    16% {
+      opacity: 0.98;
+    }
+  
+    17% {
+      opacity: 0.9;
+    }
+  
+    19% {
+      opacity: 0.93;
+    }
+  
+    20% {
+      opacity: 0.99;
+    }
+  
+    24% {
+      opacity: 1;
+    }
+  
+    26% {
+      opacity: 0.94;
+    }
+  
+    28% {
+      opacity: 0.98;
+    }
+  
+    37% {
+      opacity: 0.93;
+    }
+  
+    38% {
+      opacity: 0.5;
+    }
+  
+    39% {
+      opacity: 0.96;
+    }
+  
+    42% {
+      opacity: 1;
+    }
+  
+    44% {
+      opacity: 0.97;
+    }
+  
+    46% {
+      opacity: 0.94;
+    }
+  
+    56% {
+      opacity: 0.9;
+    }
+  
+    58% {
+      opacity: 0.9;
+    }
+  
+    60% {
+      opacity: 0.99;
+    }
+  
+    68% {
+      opacity: 1;
+    }
+  
+    70% {
+      opacity: 0.9;
+    }
+  
+    72% {
+      opacity: 0.95;
+    }
+  
+    93% {
+      opacity: 0.93;
+    }
+  
+    95% {
+      opacity: 0.95;
+    }
+  
+    97% {
+      opacity: 0.93;
+    }
+  
+    to {
+      opacity: 1;
+    }
+  }
+
+
+.events{
+  margin: 210px 0 20px 20px;
+}
+.events h1{
+  font-size: 2.5rem;
+  color: #ecda42; background-image: -webkit-linear-gradient(135deg, #ecda42 15%, #308c95 77%, #ba2043 42%); background-clip: text; -webkit-background-clip: text; text-fill-color: transparent; -webkit-text-fill-color: transparent;
+  font-family: "Mohave";
+}
+.cards{
+  display: flex;
+  justify-content: center;
+  margin: 50px 0;
+}
+.card{
+  filter: drop-shadow(orange  5px 5px 10px);
+  margin: 30px;
+}
+.promo{
+  margin: 20px;
+
+}
+.promo h1{
+  font-size: 2.5rem;
+  color: #ecda42; background-image: -webkit-linear-gradient(135deg, #ecda42 15%, #308c95 77%, #ba2043 42%); background-clip: text; -webkit-background-clip: text; text-fill-color: transparent; -webkit-text-fill-color: transparent;
+  font-family: "Mohave";
+}
+.promo video{
+  height: 300px;
+  width: 400px;
+}
+.v1{
+  margin: 50px 0;
+  display: flex;
+  justify-content: center;
+}
+.profile{
+  margin: 20px;
+}
+.profile h1{
+    font-size: 2.5rem;
+    color: #ecda42; background-image: -webkit-linear-gradient(135deg, #ecda42 15%, #308c95 77%, #ba2043 42%); background-clip: text; -webkit-background-clip: text; text-fill-color: transparent; -webkit-text-fill-color: transparent;
+    font-family: "Mohave";
+}
+.people{
+  text-align: center;
+}
+.profile img{
+  border-radius: 50%;
+  width: 200px;
+  height: 200px;
+  margin: 20px;
+}
+.people p{
+  color: white;
+  font-size: 1.2rem;
+}
+.i1{
+  margin-top: 60px;
+}
+.ft{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: beige;
+  height: 100px;
+}
+.ft p{
+  color: #6b1839;
+}
