@@ -356,7 +356,7 @@ font-size: 1.5rem;
 .events h1{
   font-size: 2.5rem;
   color: #ecda42; background-image: -webkit-linear-gradient(135deg, #ecda42 15%, #308c95 77%, #ba2043 42%); background-clip: text; -webkit-background-clip: text; text-fill-color: transparent; -webkit-text-fill-color: transparent;
-  font-family: "Mohave";
+  font-family: "Tilt Neon";
 }
 .cards{
   display: flex;
@@ -401,10 +401,16 @@ font-size: 1.5rem;
   width: 200px;
   height: 200px;
   margin: 20px;
+  border: double 4px transparent;
+  border-radius: 80px;
+  background-image: linear-gradient(white, white), radial-gradient(circle at top left, #f00,#3020ff);
+  background-origin: border-box;
+  background-clip: padding-box, border-box;
 }
 .people p{
   color: white;
-  font-size: 1.2rem;
+  font-size: 1.7rem;
+  font-family: "Dancing Script";
 }
 .i1{
   margin-top: 60px;
@@ -420,5 +426,4 @@ font-size: 1.5rem;
   color: #6b1839;
   text-align: center;
   margin: auto;
-
 }
