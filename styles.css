@@ -410,16 +410,17 @@ margin-bottom: 70px;
   margin-top: 60px;
 }
 .ft{
-  display: flex;
+  /* display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: center; */
   background-color: beige;
   height: 100px;
+  width: 95%;
 }
 .ft p{
   color: #6b1839;
   text-align: center;
-  margin: auto;
+  margin: 10px 0;
 }
 .saveetha{
   height: 100px;
@@ -443,7 +444,7 @@ h3{
   font-size: 1.2rem;
   text-align: center;
 }
-a{
+.mysite{
   text-decoration: none;
   color: #fff;
   background: rgb(2,0,36);
