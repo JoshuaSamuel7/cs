@@ -1,419 +1,451 @@
 body{
-    margin: 0;
+  margin: 0;
+  overflow-x: hidden;
+}
+.hd h1{
+  color: white;
+  text-align: center;
+  font-family: "Pixelify Sans";
+  font-size: 2.5rem;
+  line-height: 0.5;
+  margin: 0;
+  position: absolute;
+  top: 200px;
+}
+h2{
+  text-align: center;
+  background: #121FCF;
+  background: linear-gradient(to right, #fff 0%, #CF1512 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+font-weight: 900;
+font-size: 1.3rem;
+margin-top: 250px;
+margin-bottom: 70px;
+}
+#myVideo {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  min-width: 100%;
+  min-height: 100%;
+  z-index: -1;
+}
+
+
+ 
+ .fire {
+  margin: 50px 0;
+  color: #f5f5f5; /* Light text color */
+  text-align:center; /* Center alignment of text */
+  font-family: 'Courier New', Courier, monospace; /* Monospace font for sharp edges */
+  font-size: 3.5rem; /* Text size */
+  /* Multi-layered text-shadow for fire effect */
+  text-shadow:
+  0px -1px 3px #fff, /* Innermost layer - intense heat (white) */
+  0px -2px 6px #FF3, /* Second layer - core of flame (yellow) */
+  0px -6px 12px #F90, /* Middle layer - body of flame (orange) */
+  0px -10px 20px #C33; /* Outermost layer - edges of flame (red) */
+ }
+ 
+ /* Define the animation named "flicker" */
+ @keyframes flicker {
+     /* Initial state of animation */
+     0%, 
+     /* Final state of animation */
+     100% { 
+         text-shadow: 
+             0 -1px 3px #fff, /* Innermost layer - intense heat (white) */
+             0 -2px 6px #FF3, /* Second layer - core of flame (yellow) */
+             0 -6px 12px #F90, /* Middle layer - body of flame (orange) */
+             0 -10px 20px #C33; /* Outermost layer - edges of flame (red) */
+     }
+     /* Middle state of animation */
+     50% { 
+         text-shadow: 
+             0 -2px 6px #fff, /* Innermost layer - intense heat (white) */
+             0 -4px 12px #FF3, /* Second layer - core of flame (yellow) */
+             0 -8px 16px #F90, /* Middle layer - body of flame (orange) */
+             0 -12px 24px #C33; /* Outermost layer - edges of flame (red) */
+     }
+ }
+ 
+ .fire {
+     /* Apply the "flicker" animation to the .fire class */
+     animation: flicker 2s infinite;
+ }
+ 
+
+@media (max-width:1024px) {
+  #myVideo{
+    width: auto;
+    height: auto;
+  }
+  body{
     overflow-x: hidden;
   }
-  .hd h1{
-    color: white;
-    text-align: center;
-    font-family: "Pixelify Sans";
-    font-size: 1.8rem;
-    line-height: 0.5;
-  }
-  h2{
-    text-align: center;
-    background: #121FCF;
-    background: linear-gradient(to right, #121FCF 0%, #CF1512 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-  font-weight: 900;
-  font-size: 1.5rem;
-      margin-bottom:100px;
-  }
-  #myVideo {
-    position: fixed;
-    right: 0;
-    bottom: 0;
-    min-width: 100%;
-    min-height: 100%;
-    z-index: -1;
-  }
   
-  
-   
-   .fire {
-    margin: 50px 0;
-    color: #f5f5f5; /* Light text color */
-    text-align:center; /* Center alignment of text */
-    font-family: 'Courier New', Courier, monospace; /* Monospace font for sharp edges */
-    font-size: 3rem; /* Text size */
-    /* Multi-layered text-shadow for fire effect */
-    text-shadow:
-    0px -1px 3px #fff, /* Innermost layer - intense heat (white) */
-    0px -2px 6px #FF3, /* Second layer - core of flame (yellow) */
-    0px -6px 12px #F90, /* Middle layer - body of flame (orange) */
-    0px -10px 20px #C33; /* Outermost layer - edges of flame (red) */
-   }
-   
-   /* Define the animation named "flicker" */
-   @keyframes flicker {
-       /* Initial state of animation */
-       0%, 
-       /* Final state of animation */
-       100% { 
-           text-shadow: 
-               0 -1px 3px #fff, /* Innermost layer - intense heat (white) */
-               0 -2px 6px #FF3, /* Second layer - core of flame (yellow) */
-               0 -6px 12px #F90, /* Middle layer - body of flame (orange) */
-               0 -10px 20px #C33; /* Outermost layer - edges of flame (red) */
-       }
-       /* Middle state of animation */
-       50% { 
-           text-shadow: 
-               0 -2px 6px #fff, /* Innermost layer - intense heat (white) */
-               0 -4px 12px #FF3, /* Second layer - core of flame (yellow) */
-               0 -8px 16px #F90, /* Middle layer - body of flame (orange) */
-               0 -12px 24px #C33; /* Outermost layer - edges of flame (red) */
-       }
-   }
-   
-   .fire {
-       /* Apply the "flicker" animation to the .fire class */
-       animation: flicker 2s infinite;
-   }
-   
-  
-  @media (max-width:1024px) {
-    #myVideo{
-      width: auto;
-      height: auto;
-    }
-    body{
-      overflow-x: hidden;
-    }
-    
+}
+.hd{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 130px;
+}
+.glitch-wrapper {
+  margin: 50px 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background-color: transparent;
+}
+
+.glitch {
+  position: relative;
+  font-size: 2rem;
+  font-family: "Roboto";
+  font-weight: bold;
+  color: #FFFFFF;
+  letter-spacing: 3px;
+  z-index: 1;
+}
+
+.glitch:before,
+.glitch:after {
+  display: block;
+  content: attr(data-text);
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0.8;
+}
+
+.glitch:before {
+  animation: glitch-it 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94) both infinite;
+  color: #00FFFF;
+  z-index: -1;
+}
+
+.glitch:after {
+  animation: glitch-it 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94) reverse both infinite;
+  color: #FF00FF;
+  z-index: -2;
+}
+
+@keyframes glitch-it {
+  0% {
+     transform: translate(0);
   }
-  .hd{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 130px;
+  20% {
+     transform: translate(-2px, 2px);
   }
-  .glitch-wrapper {
-    margin: 30px 0;
-    width: 100%;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    background-color: transparent;
- }
- 
- .glitch {
-    position: relative;
+  40% {
+     transform: translate(-2px, -2px);
+  }
+  60% {
+     transform: translate(2px, 2px);
+  }
+  80% {
+     transform: translate(2px, -2px);
+  }
+  to {
+     transform: translate(0);
+  }
+}
+  
+  .sign {
+    background-image: radial-gradient(
+      ellipse 50% 35% at 50% 50%,
+      #6b1839,
+      transparent
+    );
+    letter-spacing: 2;
+    margin: 40px 0;
+    font-family: "Clip";
+    text-transform: uppercase;
     font-size: 2rem;
-    font-family: "Roboto";
-    font-weight: bold;
-    color: #FFFFFF;
-    letter-spacing: 3px;
-    z-index: 1;
- }
- 
- .glitch:before,
- .glitch:after {
-    display: block;
-    content: attr(data-text);
-    position: absolute;
-    top: 0;
-    left: 0;
-    opacity: 0.8;
- }
- 
- .glitch:before {
-    animation: glitch-it 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94) both infinite;
-    color: #00FFFF;
-    z-index: -1;
- }
- 
- .glitch:after {
-    animation: glitch-it 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94) reverse both infinite;
-    color: #FF00FF;
-    z-index: -2;
- }
- 
- @keyframes glitch-it {
-    0% {
-       transform: translate(0);
-    }
-    20% {
-       transform: translate(-2px, 2px);
-    }
-    40% {
-       transform: translate(-2px, -2px);
-    }
-    60% {
-       transform: translate(2px, 2px);
-    }
-    80% {
-       transform: translate(2px, -2px);
-    }
-    to {
-       transform: translate(0);
-    }
- }
-    
-    .sign {
-      background-image: radial-gradient(
-        ellipse 50% 35% at 50% 50%,
-        #6b1839,
-        transparent
-      );
-      letter-spacing: 2;
-      margin: 40px 0;
-      font-family: "Clip";
-      text-transform: uppercase;
-      font-size: 2rem;
+    color: #ffe6ff;
+    text-shadow: 0 0 0.6rem #ffe6ff, 0 0 1.5rem #ff65bd,
+      -0.2rem 0.1rem 1rem #ff65bd, 0.2rem 0.1rem 1rem #ff65bd,
+      0 -0.5rem 2rem #ff2483, 0 0.5rem 3rem #ff2483;
+    animation: shine 2s forwards, flicker 3s infinite;
+  }
+  
+  @keyframes blink {
+    0%,
+    22%,
+    36%,
+    75% {
       color: #ffe6ff;
       text-shadow: 0 0 0.6rem #ffe6ff, 0 0 1.5rem #ff65bd,
         -0.2rem 0.1rem 1rem #ff65bd, 0.2rem 0.1rem 1rem #ff65bd,
         0 -0.5rem 2rem #ff2483, 0 0.5rem 3rem #ff2483;
-      animation: shine 2s forwards, flicker 3s infinite;
     }
-    
-    @keyframes blink {
-      0%,
-      22%,
-      36%,
-      75% {
-        color: #ffe6ff;
-        text-shadow: 0 0 0.6rem #ffe6ff, 0 0 1.5rem #ff65bd,
-          -0.2rem 0.1rem 1rem #ff65bd, 0.2rem 0.1rem 1rem #ff65bd,
-          0 -0.5rem 2rem #ff2483, 0 0.5rem 3rem #ff2483;
-      }
-      28%,
-      33% {
-        color: #ff65bd;
-        text-shadow: none;
-      }
-      82%,
-      97% {
-        color: #ff2483;
-        text-shadow: none;
-      }
+    28%,
+    33% {
+      color: #ff65bd;
+      text-shadow: none;
     }
-    
-    .flicker {
-      animation: shine 2s forwards, blink 3s 2s infinite;
+    82%,
+    97% {
+      color: #ff2483;
+      text-shadow: none;
     }
-    
-    .fast-flicker {
-      animation: shine 2s forwards, blink 10s 1s infinite;
-    }
-    
-    @keyframes shine {
-      0% {
-        color: #6b1839;
-        text-shadow: none;
-      }
-      100% {
-        color: #ffe6ff;
-        text-shadow: 0 0 0.6rem #ffe6ff, 0 0 1.5rem #ff65bd,
-          -0.2rem 0.1rem 1rem #ff65bd, 0.2rem 0.1rem 1rem #ff65bd,
-          0 -0.5rem 2rem #ff2483, 0 0.5rem 3rem #ff2483;
-      }
-    }
-    
-    @keyframes flicker {
-      from {
-        opacity: 1;
-      }
-    
-      4% {
-        opacity: 0.9;
-      }
-    
-      6% {
-        opacity: 0.85;
-      }
-    
-      8% {
-        opacity: 0.95;
-      }
-    
-      10% {
-        opacity: 0.9;
-      }
-    
-      11% {
-        opacity: 0.922;
-      }
-    
-      12% {
-        opacity: 0.9;
-      }
-    
-      14% {
-        opacity: 0.95;
-      }
-    
-      16% {
-        opacity: 0.98;
-      }
-    
-      17% {
-        opacity: 0.9;
-      }
-    
-      19% {
-        opacity: 0.93;
-      }
-    
-      20% {
-        opacity: 0.99;
-      }
-    
-      24% {
-        opacity: 1;
-      }
-    
-      26% {
-        opacity: 0.94;
-      }
-    
-      28% {
-        opacity: 0.98;
-      }
-    
-      37% {
-        opacity: 0.93;
-      }
-    
-      38% {
-        opacity: 0.5;
-      }
-    
-      39% {
-        opacity: 0.96;
-      }
-    
-      42% {
-        opacity: 1;
-      }
-    
-      44% {
-        opacity: 0.97;
-      }
-    
-      46% {
-        opacity: 0.94;
-      }
-    
-      56% {
-        opacity: 0.9;
-      }
-    
-      58% {
-        opacity: 0.9;
-      }
-    
-      60% {
-        opacity: 0.99;
-      }
-    
-      68% {
-        opacity: 1;
-      }
-    
-      70% {
-        opacity: 0.9;
-      }
-    
-      72% {
-        opacity: 0.95;
-      }
-    
-      93% {
-        opacity: 0.93;
-      }
-    
-      95% {
-        opacity: 0.95;
-      }
-    
-      97% {
-        opacity: 0.93;
-      }
-    
-      to {
-        opacity: 1;
-      }
-    }
-  
-  
-  .events{
-    margin: 210px 0 20px 20px;
   }
-  .events h1{
+  
+  .flicker {
+    animation: shine 2s forwards, blink 3s 2s infinite;
+  }
+  
+  .fast-flicker {
+    animation: shine 2s forwards, blink 10s 1s infinite;
+  }
+  
+  @keyframes shine {
+    0% {
+      color: #6b1839;
+      text-shadow: none;
+    }
+    100% {
+      color: #ffe6ff;
+      text-shadow: 0 0 0.6rem #ffe6ff, 0 0 1.5rem #ff65bd,
+        -0.2rem 0.1rem 1rem #ff65bd, 0.2rem 0.1rem 1rem #ff65bd,
+        0 -0.5rem 2rem #ff2483, 0 0.5rem 3rem #ff2483;
+    }
+  }
+  
+  @keyframes flicker {
+    from {
+      opacity: 1;
+    }
+  
+    4% {
+      opacity: 0.9;
+    }
+  
+    6% {
+      opacity: 0.85;
+    }
+  
+    8% {
+      opacity: 0.95;
+    }
+  
+    10% {
+      opacity: 0.9;
+    }
+  
+    11% {
+      opacity: 0.922;
+    }
+  
+    12% {
+      opacity: 0.9;
+    }
+  
+    14% {
+      opacity: 0.95;
+    }
+  
+    16% {
+      opacity: 0.98;
+    }
+  
+    17% {
+      opacity: 0.9;
+    }
+  
+    19% {
+      opacity: 0.93;
+    }
+  
+    20% {
+      opacity: 0.99;
+    }
+  
+    24% {
+      opacity: 1;
+    }
+  
+    26% {
+      opacity: 0.94;
+    }
+  
+    28% {
+      opacity: 0.98;
+    }
+  
+    37% {
+      opacity: 0.93;
+    }
+  
+    38% {
+      opacity: 0.5;
+    }
+  
+    39% {
+      opacity: 0.96;
+    }
+  
+    42% {
+      opacity: 1;
+    }
+  
+    44% {
+      opacity: 0.97;
+    }
+  
+    46% {
+      opacity: 0.94;
+    }
+  
+    56% {
+      opacity: 0.9;
+    }
+  
+    58% {
+      opacity: 0.9;
+    }
+  
+    60% {
+      opacity: 0.99;
+    }
+  
+    68% {
+      opacity: 1;
+    }
+  
+    70% {
+      opacity: 0.9;
+    }
+  
+    72% {
+      opacity: 0.95;
+    }
+  
+    93% {
+      opacity: 0.93;
+    }
+  
+    95% {
+      opacity: 0.95;
+    }
+  
+    97% {
+      opacity: 0.93;
+    }
+  
+    to {
+      opacity: 1;
+    }
+  }
+
+
+.events{
+  margin: 210px 0 20px 20px;
+}
+.events h1{
+  font-size: 2.5rem;
+  color: #ecda42; background-image: -webkit-linear-gradient(135deg, #0f07f0 15%, #308c95 77%, #12e10e 42%); background-clip: text; -webkit-background-clip: text; text-fill-color: transparent; -webkit-text-fill-color: transparent;
+  font-family: "Tilt Neon";
+}
+.cards{
+  display: flex;
+  justify-content: center;
+  margin: 50px 0;
+}
+.card{
+  filter: drop-shadow(orange  5px 5px 10px);
+  margin: 30px;
+}
+.promo{
+  margin: 20px;
+
+}
+.promo h1{
+  font-size: 2.5rem;
+  color: #ecda42; background-image: -webkit-linear-gradient(135deg, #f2f60e 77%, #0ee15b 42%); background-clip: text; -webkit-background-clip: text; text-fill-color: transparent; -webkit-text-fill-color: transparent;
+  font-family: "Mohave";
+}
+.promo video{
+  height: 300px;
+  width: 400px;
+}
+.v1{
+  margin: 50px 0;
+  display: flex;
+  justify-content: center;
+}
+.profile{
+  margin: 20px;
+}
+.profile h1{
     font-size: 2.5rem;
-    color: #ecda42; background-image: -webkit-linear-gradient(135deg, #ecda42 15%, #308c95 77%, #ba2043 42%); background-clip: text; -webkit-background-clip: text; text-fill-color: transparent; -webkit-text-fill-color: transparent;
-    font-family: "Tilt Neon";
-  }
-  .cards{
-    display: flex;
-    justify-content: center;
-    margin: 50px 0;
-  }
-  .card{
-    filter: drop-shadow(orange  5px 5px 10px);
-    margin: 30px;
-  }
-  .promo{
-    margin: 20px;
-  
-  }
-  .promo h1{
-    font-size: 2.5rem;
-    color: #ecda42; background-image: -webkit-linear-gradient(135deg, #ecda42 15%, #308c95 77%, #ba2043 42%); background-clip: text; -webkit-background-clip: text; text-fill-color: transparent; -webkit-text-fill-color: transparent;
+    color: #ecda42; background-image: -webkit-linear-gradient(135deg, #ecda42 15%, #308c95 77%, #18f011 42%); background-clip: text; -webkit-background-clip: text; text-fill-color: transparent; -webkit-text-fill-color: transparent;
     font-family: "Mohave";
-  }
-  .promo video{
-    height: 300px;
-    width: 400px;
-  }
-  .v1{
-    margin: 50px 0;
-    display: flex;
-    justify-content: center;
-  }
-  .profile{
-    margin: 20px;
-  }
-  .profile h1{
-      font-size: 2.5rem;
-      color: #ecda42; background-image: -webkit-linear-gradient(135deg, #ecda42 15%, #308c95 77%, #ba2043 42%); background-clip: text; -webkit-background-clip: text; text-fill-color: transparent; -webkit-text-fill-color: transparent;
-      font-family: "Mohave";
-  }
-  .people{
-    text-align: center;
-  }
-  .profile img{
-    border-radius: 50%;
-    width: 200px;
-    height: 200px;
-    margin: 20px;
-    border: double 4px transparent;
-    border-radius: 80px;
-    background-image: linear-gradient(white, white), radial-gradient(circle at top left, #f00,#3020ff);
-    background-origin: border-box;
-    background-clip: padding-box, border-box;
-  }
-  .people p{
-    color: white;
-    font-size: 1.7rem;
-    font-family: "Dancing Script";
-  }
-  .i1{
-    margin-top: 60px;
-  }
-  .ft{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: beige;
-    height: 100px;
-  }
-  .ft p{
-    color: #6b1839;
-    text-align: center;
-    margin: auto;
-  }
+}
+.people{
+  text-align: center;
+}
+.profile img{
+  border-radius: 50%;
+  width: 200px;
+  height: 200px;
+  margin: 20px;
+  border: double 4px transparent;
+  border-radius: 80px;
+  background-image: linear-gradient(white, white), radial-gradient(circle at top left, #f00,#3020ff);
+  background-origin: border-box;
+  background-clip: padding-box, border-box;
+}
+.people p{
+  color: white;
+  font-size: 1.7rem;
+  font-family: "Agbalumo";
+}
+.i1{
+  margin-top: 60px;
+}
+.ft{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: beige;
+  height: 100px;
+}
+.ft p{
+  color: #6b1839;
+  text-align: center;
+  margin: auto;
+}
+.saveetha{
+  height: 100px;
+  width: 500px;
+}
+img{
+  margin: 0;
+}
+h4{
+  color: #fff;
+}
+.card-text{
+  font-size: 1.3rem;
+  text-align: center;
+}
+.ph2{
+  height: 600px;
+}
+h3{
+  color: white;
+  font-size: 1rem;
+  text-align: center;
+}
+a{
+  text-decoration: none;
+  color: #fff;
+  background: rgb(2,0,36);
+  color: #ecda42; background-image: -webkit-linear-gradient(135deg, #750979 15%,#00d4ff 42%); background-clip: text; -webkit-background-clip: text; text-fill-color: transparent; -webkit-text-fill-color: transparent;
+}
